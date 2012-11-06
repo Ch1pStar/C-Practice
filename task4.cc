@@ -48,13 +48,14 @@ void itemsInRangeSwap(int *arr, int n, int p, int q){
 
 
 int main(){
-    int *arr = new int[10];
-    rndFiller(arr,10);
-    arrPrint(arr,10);
+	int N=8;
+    int *arr = new int[N];
+    rndFiller(arr,N);
+    arrPrint(arr,N);
     
      
     cout << "-----------*****************------------" << endl;
-    itemsInRangeSwap(arr,10,2000,10000);
-    arrPrint(arr,10);
+    itemsInRangeSwap(arr,N,2000,10000);
+    arrPrint(arr,N);
     return 0;
 }
