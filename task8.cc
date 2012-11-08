@@ -5,24 +5,23 @@ using namespace std;
 
 int main(){
 	char n,a;	
-	char *lawl;
 	string *cheater;
-	int cnt=0,size_;
+	int cnt=0,size_,margin=-1;
 	cin >> n;
-	//n=67;
 	size_ = n-64;
-	lawl = new char[size_];
 	cheater = new string[size_];
 	
 	for(int i=65;i<=n;i++){
-		a=i;
-		cheater[cnt] = a;
-	
+		cheater[cnt] = 65;
+		
+		
+		a=i-margin; 
 		for(int j=1;j<i-64;j++){
-			a=i;
-			cheater[cnt] += a;
+		
+			cheater[cnt] += a; 
+			a++;
 		}
-	
+		margin++;
 		cnt++;
 	
 	}
@@ -30,5 +29,6 @@ int main(){
 	for(int i=0;i<size_;i++)
 		cout << cheater[i] << endl;
 	
+	delete []cheater;
 	return 0;
 }
