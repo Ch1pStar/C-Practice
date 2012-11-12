@@ -3,11 +3,12 @@
 using namespace std;
 
 
-int main(){
-	char n,a;	
+void printSomething(char n){
+
+	char a;	
 	string *cheater;
 	int cnt=0,size_,margin=-1;
-	cin >> n;
+	
 	size_ = n-64;
 	cheater = new string[size_];
 	
@@ -30,5 +31,16 @@ int main(){
 		cout << cheater[i] << endl;
 	
 	delete []cheater;
+
+
+
+
+}
+
+int main(){
+	char n;
+	cin >> n;
+	printSomething(n);
+
 	return 0;
 }
